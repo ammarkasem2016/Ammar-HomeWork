@@ -1,0 +1,65 @@
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~
+$ pwd
+/c/Users/HackYourFuture
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~
+$ cd ~/Desktop/Homework/JS
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS
+$ mkdir blank
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS
+$ cd blank
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ touch greetings.txt
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ for i in {1...5};do echo "Hello" >> greetings.txt;done
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ for i in {1...5};do cp greetings.txt $i.txt;done
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ for i in {1..5};do echo "Hello" >> greetings.txt;done
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ for i in {1..5};do cp greetings.txt $i.txt;done
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ touch pets.txt
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ echo "cat" > pets.txt
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ echo "dogs" >> pets.txt
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ echo "hamster" >> pets.txt
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ touch commands.txt
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ echo "cat" > commands.txt
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ echo "1s" >> commands.txt
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ exho "pwd" >> commands.txt
+bash: exho: command not found
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ echo "pwd" >> commands.txt
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ grep -vf commands.txt pets.txt > lovelyCommands.txt
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ grep -vf commands.txt pets.txt >> lovelyCommands.txt
+
+HackYourFuture@DESKTOP-VQ5HOJG MINGW64 ~/Desktop/Homework/JS/blank
+$ pwd
+/c/Users/HackYourFuture/Desktop/Homework/JS/blank
