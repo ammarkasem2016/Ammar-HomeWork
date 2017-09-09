@@ -1,0 +1,126 @@
+// 1
+
+function argument(a, b, c) {
+	return a + b + c;
+}
+console.log(argument(1, 2, 3));
+
+// 2
+
+function colorCar(color) {
+	console.log("a " + color + " car");
+}
+colorCar("black");
+
+// 3
+
+let myObj = {
+	name : 'Ammar',
+	mobile : '0646677309',
+	birthDay : '06-09-1985'
+}
+function printMyObj(obj){
+	for(key in obj){
+		console.log(key + ' : ' +  obj[key]);
+	}
+}
+printMyObj(myObj);
+
+// 4
+
+function vehicleType(color , code){
+	if(code === 1) {
+		console.log("a " + color + " car");
+	}
+	else if(code === 2) {
+		console.log("a " + color + " motorBike");
+    }
+	else console.log('unValid code');
+}
+vehicleType("red", 1);
+vehicleType("red", 2);
+vehicleType("red", 3);
+
+// 5
+
+if (3 === 3) {
+	console.log("true")
+}
+else console.log("false")
+console.log(3 === 4 ? true : false);
+
+// 6
+
+function vehicle(color , code , age) {
+	let vehicle_type = ' ';
+	if(code === 0) {
+		vehicle_type = "BMW";
+	}
+	else if(code === 1) {
+		vehicle_type = "mercedes";
+	}
+	let vehicle_age = ' ';
+	if(age === 1) {
+		vehicle_age = "not used";
+	}
+	else if(age > 1 && age < 7) {
+		vehicle_age = "have new";
+	}
+	else vehicle_age = "used";
+	console.log("a " + color + " " + vehicle_age + " " + vehicle_type);
+}
+vehicle("black", 0, 7);
+vehicle("blue", 0, 3);
+vehicle("red", 1, 1);
+vehicle("pink", 1, 5);
+vehicle("green", 1, 7);
+
+// 7
+
+let vehicles = ["bike", "motorBike", "airPlane", "caravan", "car"];
+
+// 8
+
+console.log(vehicles[2]);
+
+// 9
+
+function vehicle1(color , code , age){
+	let vehicle_type = ' ';
+	if(code < vehicles.length) {
+		vehicle_type = vehicles[code];
+	}
+	let vehicle_age = ' ';
+	if(age == 0) {
+		vehicle_age = "not used";
+	}
+	else if(age > 0 && age < 7) {
+		vehicle_age = "new";
+	}
+	else vehicle_age = "used";
+	console.log("a " + color + " " +  vehicle_age + " " + vehicle_type);
+}
+vehicle1("black", 3, 7);
+vehicle1("pink", 1, 1);
+vehicle1("green", 4, 0);
+vehicle1("silver", 2, 3);
+
+// 10
+
+function vehicleAdvertisement() {
+	let adv = "Amazing Joe's Garage, we service ";
+	for(let i=0;i< vehicles.length;i++)
+	adv += vehicles[i] + ', ';
+	adv += " . ";
+	console.log(adv)
+}
+vehicleAdvertisement();
+
+// 11
+
+vehicles.push("truck");
+vehicleAdvertisement();
+
+// 12
+
+let newObj = {};
