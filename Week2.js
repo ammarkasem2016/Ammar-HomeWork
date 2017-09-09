@@ -118,9 +118,135 @@ vehicleAdvertisement();
 
 // 11
 
-vehicles.push("truck");
+//or unshift
+vehicles.push("bulldozer");
 vehicleAdvertisement();
 
 // 12
 
 let newObj = {};
+
+// 13
+
+function newObj1(obj) {
+	let new1 = 1;
+	for(let key in obj){
+		new1++;
+	}
+	return new1;
+}	
+function newObj2(obj1 , obj2){
+	for(let key in obj1){
+		if(!obj1.hasOwnProperty(key))
+			return false;
+	}
+	return true;
+}
+function allObj(obj1 , obj2 , example){
+	for(let key in obj1){
+		if(typeof obj1[key] !== 'object' && typeof obj2[key] !== 'object')
+		{
+			if(is_strict)
+			{
+				if(obj1[key] !== obj2[key])
+					return false;
+			}
+			else{
+				if(obj1[key] !== obj2[key])
+					return false;
+			}
+		}
+		else if(typeof obj1[key] === 'object' && typeof obj2[key] === 'object')
+		{
+			if(!objEqual(obj1[key] , obj2[key])) 
+				return false;
+		}
+		else
+			return false;
+	}
+	return true;
+}
+function objEqual(obj1 , obj2 , example=false){
+	if(newObj1(obj1) !== newObj2(obj2))
+		return false;
+	if(!doubleObj(obj1 , obj2))
+		return false;
+	if(!allObj(obj1 , obj2 , example))
+	return false;
+	return true;
+}
+var obj1 = {
+	a: 1, 
+	b: 'This 1B', 
+	c: { 
+		foo: 'This 1Foo', 
+		bar: [1,2,3,4]
+	}
+}
+var obj2 = {
+	a: '1', 
+	b: 'This 2B', 
+	c: { 
+		foo: 'This 2Foo', 
+		bar: [1,2,3,4]
+	}
+}
+console.log(objEqual(obj1 , obj2));
+console.log(objEqual(obj1 , obj2 , true));
+
+
+// 14
+
+function foo(func) {
+	func();
+}
+function bar() {
+	console.log('Hello, I am bar!');
+}
+foo(bar);
+
+// 15
+
+var x = [1,2,3];
+var y = ['1',2,3];
+var z = y;
+console.log(x === y);
+console.log(objEqual(x , y));
+console.log(objEqual(x , y , true));
+function arr1(a, b , is_strict=false) {
+    if (a.length != b.length) 
+		return false;
+    for (i=0;i<a.length;i++) {
+		if(is_strict){
+			if (a[i] !== b[i]) 
+				return false;
+		}
+		else{
+			if (a[i] !== b[i]) 
+				return false;
+		}
+    }
+    return true;
+}
+console.log(arr1(x , y));
+console.log(arr1(y , z));
+console.log(arr1(x , y , true));
+console.log(arr1(y , z , true));
+
+// 16
+
+var o1 = { foo: 'bar' };
+var o2 = { foo: 'bar1' };
+var o3 = o1;
+o1.foo = 'bar2';
+o1 = o2;
+console.log(o1);
+console.log(o3);
+console.log(o2); 
+
+// 17
+
+let bar2 = 42;  
+console.log(typeof(typeof bar2));
+
+// End
