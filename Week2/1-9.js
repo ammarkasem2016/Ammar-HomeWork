@@ -30,7 +30,6 @@ myFin(10, 15, myThree, myFive);
 function repeatStringNumTimesOne(str, num) {
   let strOne = "";
   if (num > 0)
-    //return strOne;
   for(let i = 1 ; i <=num ; i++)
     strOne += str;
   return strOne;
@@ -38,7 +37,6 @@ function repeatStringNumTimesOne(str, num) {
 function repeatStringNumTimesTwo(str, num) {
   let strTwo = "";
   if (num > 0) {
-   // return myStr;
   let i = 0;
   while(i < num){
     strTwo += str;
@@ -50,7 +48,6 @@ function repeatStringNumTimesTwo(str, num) {
 function repeatStringNumTimesThree(str, num) {
   let strThree = "";
   if (num > 0) {
-    //return myStr;
   let i = 0;
     do{
       strThree += str;
